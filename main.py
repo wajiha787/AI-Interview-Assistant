@@ -21,10 +21,10 @@ load_dotenv()
 def main():
     """Main function to run the application"""
     # Check for required environment variables
-    if not os.getenv("OPENAI_API_KEY"):
-        print("❌ Error: OPENAI_API_KEY environment variable is required")
-        print("Please set your OpenAI API key in the .env file or environment variables")
-        print("Example: export OPENAI_API_KEY='your-api-key-here'")
+    if not os.getenv("GOOGLE_API_KEY"):
+        print("❌ Error: GOOGLE_API_KEY environment variable is required")
+        print("Please set your Google Gemini API key in the .env file or environment variables")
+        print("Example: export GOOGLE_API_KEY='your-api-key-here'")
         sys.exit(1)
     
     print("🚀 Starting AI Hiring Evaluation System...")

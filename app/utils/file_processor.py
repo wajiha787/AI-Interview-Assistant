@@ -2,7 +2,7 @@ from fastapi import UploadFile, HTTPException
 import PyPDF2
 import docx
 import io
-from typing import str
+from typing import Optional
 
 
 class FileProcessor:

@@ -7,11 +7,15 @@ Provides easy startup with environment validation
 import os
 import sys
 from pathlib import Path
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 def check_environment():
     """Check if required environment variables are set"""
-    required_vars = ['OPENAI_API_KEY']
-    missing_vars = []
+    required_vars = ['GOOGLE_API_KEY']
+    missing_vars = [] 
     
     for var in required_vars:
         if not os.getenv(var):
@@ -23,7 +27,7 @@ def check_environment():
             print(f"   - {var}")
         print("\nPlease set these variables in your .env file or environment")
         print("Example .env file:")
-        print("OPENAI_API_KEY=your_openai_api_key_here")
+        print("GOOGLE_API_KEY=your_google_api_key_here")
         return False
     
     return True
